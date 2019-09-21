@@ -1,0 +1,42 @@
+.e-float-label {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  margin-bottom: 10px;
+  height: 3.5em;
+  box-sizing: border-box;
+  box-shadow: none;
+  position: relative;
+}
+.e-label {
+  z-index: 0;
+  height: 0;
+  left: 10px;
+  top:0px;
+  position: absolute;
+  top: 15px;
+  font-weight: 500;
+  color: #777777;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease-in-out;
+}
+.e-input {
+  z-index: 1;
+  height: 3.5em;
+  
+  &:valid,
+  &:focus {
+    padding: 20px 8px 5px 8px;
+  }
+  &:focus {
+    background: rgba(255,255,255,1);
+  }
+  &:valid + e-label,
+  &:focus + label {
+    color: #333;
+    font-size: 12px;
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+}
